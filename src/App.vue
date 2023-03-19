@@ -1,27 +1,34 @@
 <template>
-  <Header/>
-  <Main/>
-  <Footer/>
+  <div class="container hero is-fullheight">
+    <Header/>
+    <Wrapper/>
+    <Footer/>
+  </div>
 </template>
 
 <script>
 
 import Header from "@/components/skeleton/Header";
-import Main from "@/components/skeleton/Main";
+import Wrapper from "@/components/skeleton/Wrapper";
 import Footer from "@/components/skeleton/Footer";
 export default {
   name: 'App',
   components: {
     Header,
-    Main,
+    Wrapper,
     Footer
   }
 }
 </script>
 
-<style>
-  html {
-    background: black;
-    color: white;
+<style lang="scss">
+  * {
+    background: $dark!important;
+    color: $white-ter!important;
   }
+
+  html, body {
+    height: 100vh;
+  }
+
 </style>
