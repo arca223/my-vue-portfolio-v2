@@ -1,10 +1,11 @@
 <script setup>
-import Menu from "@/components/menu/Menu";
+import Menu from "@/components/skeleton/header/Menu";
+import MVPNavbar from "@/components/skeleton/header/MVP-Navbar";
 </script>
 
 <template>
   <header class="header m-5 mb-10">
-    <div class="title">Mon Portofolio</div>
+    <MVPNavbar></MVPNavbar>
     <Menu/>
   </header>
 </template>

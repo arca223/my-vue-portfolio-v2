@@ -4,7 +4,9 @@
 
 <template>
   <div class="hero-body">
-    <router-view></router-view>
+    <div class="container">
+      <router-view></router-view>
+    </div>
   </div>
 </template>
 

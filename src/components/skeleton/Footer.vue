@@ -9,4 +9,9 @@
 </template>
 
 <style lang="scss" scoped>
+  .footer {
+    padding-bottom: 3rem!important;
+    background: $white-ter!important;
+    color: $black-ter!important;
+  }
 </style>

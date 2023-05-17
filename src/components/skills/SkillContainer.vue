@@ -1,9 +1,8 @@
 <template>
-  <div>hehe home</div>
+  <div>skills container</div>
 </template>
 
 <script setup>
-
 </script>
 
 <style scoped>

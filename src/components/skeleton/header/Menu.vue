@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router'
-import { routes } from '../../router'
+import { routes } from '@/router'
 const router = useRouter()
 
 const currentRoute = ref(router.currentRoute.value.name)
@@ -23,19 +23,26 @@ const capitalize = (s) => {
           :to="link.path"
           class="title is-4"
           @click="currentRoute = link.name">
-        <span>{{ capitalize(link.name) }}</span>
+        <div>{{ capitalize(link.name) }}</div>
       </router-link>
     </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
-  .title>span:hover {
-    color: $grey-light!important;
-    //transform: scale(1.2)!;
+  .title {
+    & > div:hover {
+      color: $black-bis;
+      transform: scale(1.1);
+    }
+
+    &.dark > div:hover {
+      color: $white-bis;
+    }
   }
-  .router-link-active>span {
-    color: $grey-light!important;
-    //transform: scale(1.5);
+  .router-link-active>div {
+    color: $black-bis;
+    transform: scale(1.1);
   }
+
 </style>

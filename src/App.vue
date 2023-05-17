@@ -8,7 +8,7 @@
 
 <script>
 
-import Header from "@/components/skeleton/Header";
+import Header from "@/components/skeleton/header/Header";
 import Wrapper from "@/components/skeleton/Wrapper";
 import Footer from "@/components/skeleton/Footer";
 export default {
@@ -22,13 +22,4 @@ export default {
 </script>
 
 <style lang="scss">
-  * {
-    background: $dark!important;
-    color: $white-ter!important;
-  }
-
-  html, body {
-    height: 100vh;
-  }
-
 </style>
