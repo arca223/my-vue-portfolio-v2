@@ -8,12 +8,18 @@
   </ul></section>
   <section class="section">Project Goal + Techno used</section>
   <section class="section">Github to project</section>
+  <section class="section">
+    <Tile
+      :title="'Tile header'"
+      :content="'Tile content'"
+      :footer="'Tile foooter'"/>
+  </section>
+  <section class="section">Accéder à toutes mes experiences.</section>
 </template>
 
 <script setup>
-
+import Tile from "@/components/common/Tile";
 </script>
 
 <style scoped>
-
 </style>
