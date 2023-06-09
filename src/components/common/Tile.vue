@@ -7,10 +7,12 @@
     </div>
     <div class="card-content">
       <div class="content">
-        {{ props.content }}
+        <div><slot name="time"></slot></div>
+        <div><slot name="skill"></slot></div>
+        <div><slot name="description"></slot></div>
       </div>
     </div>
-    <div class="card-footer">
+    <div v-if="props.isFooter" class="card-footer">
       <div class="card-footer-item">{{ props.footer }}</div>
     </div>
   </div>
@@ -21,7 +23,7 @@ import { defineProps } from "vue";
 const props = defineProps(
   {
     title: String,
-    content: String,
+    isFooter: Boolean,
     footer: String
   }
 );

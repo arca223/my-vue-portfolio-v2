@@ -27,10 +27,16 @@
   <section class="section">Project Goal + Techno used</section>
   <section class="section">Github to project</section>
   <section class="section">
+    Actual Project:
     <Tile
-      :title="'Tile header'"
-      :content="'Tile content'"
-      :footer="'Tile foooter'"/>
+      :title="'World roadtrip - Sabbatical year'"
+      :footer="'Tile foooter'"
+      :is-footer="false"
+    >
+      <template v-slot:time>6 months</template>
+      <template v-slot:skill>Yolo Vuejs/SF</template>
+      <template v-slot:description>Traveling the world while working on different project<br/> Developing my VueJS Portfolio, learning and working on Vue and SF. Passing the related certifications</template>
+    </Tile>
   </section>
   <section class="section">Accéder à toutes mes experiences.</section>
 </template>

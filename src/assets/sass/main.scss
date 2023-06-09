@@ -9,18 +9,19 @@ html, body {
   background: $white-ter!important;
   color: $black-ter!important;
 
+  & button {
+    background: $dark!important;
+    color: $light!important;
+  }
+
   &.dark {
     background: $black-ter!important;
     color: $white-ter!important;
+
+    & button {
+      background: $light!important;
+      color: $dark!important;
+    }
   }
 }
 
-button {
-  color: $light;
-  background: $dark;
-}
-
-body.dark button {
-  background: $light;
-  color: $dark;
-}
