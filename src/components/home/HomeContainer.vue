@@ -1,12 +1,12 @@
 <template>
   <section class="section">
     <div class="title">
-      Maxime Cocquempot. Freelance Fullstack - PHP Symfony / VueJS
+      {{ store.home.fullName }}<br />
+      {{ store.home.header }}
     </div>
   </section>
   <section class="section">
-    Description du profil <br/>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    {{ store.home.description }}
   </section>
   <section class="section">
     <div class="columns">
@@ -24,7 +24,7 @@
       </div>
     </div>
   </section>
-  <section class="section">Project Goal + Techno used</section>
+  <section class="section">{{ store.home.goal }}</section>
   <section class="section">Github to project</section>
   <section class="section">
     Actual Project:
@@ -43,6 +43,10 @@
 
 <script setup>
 import Tile from "@/components/common/Tile";
+import { useDefaultStore } from '@/stores/store'
+
+const store = useDefaultStore()
+
 </script>
 
 <style scoped>
