@@ -5,22 +5,22 @@ html, body {
   height: 100vh;
 }
 
-#app, body {
+#app, body, div {
   background: $white-ter!important;
   color: $black-ter!important;
+
+  &.dark {
+    background: $black-ter !important;
+    color: $white-ter !important;
+  }
 
   & button {
     background: $dark!important;
     color: $light!important;
-  }
 
-  &.dark {
-    background: $black-ter!important;
-    color: $white-ter!important;
-
-    & button {
-      background: $light!important;
-      color: $dark!important;
+    &.dark {
+      background: $light !important;
+      color: $dark !important;
     }
   }
 }

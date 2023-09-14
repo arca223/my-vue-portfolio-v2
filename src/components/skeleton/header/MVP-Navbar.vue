@@ -13,15 +13,15 @@
       </a>
     </div>
 
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div class="navbar-menu">
       <div class="navbar-end">
         <div class="navbar-item">
           <div class="buttons">
             <a class="button" @click="switchLanguage">
-              French
+              {{ (store.switchVariables.lang === 'fr') ? 'Anglais' : 'Français' }}
             </a>
             <a class="button" @click="switchDisplayMode">
-              Dark Mode
+              {{ (store.switchVariables.colorMode === 'light') ? 'Dark' : 'Light' }}
             </a>
           </div>
         </div>
@@ -31,14 +31,19 @@
 </template>
 
 <script setup>
+import useEventsBus from '@/eventBus';
+import { useDefaultStore } from '@/stores/store.js';
+//in script setup or inside the setup hook
+const { emit } = useEventsBus();
+const store = useDefaultStore();
 
 //import {computed} from "vue";
 
 const switchLanguage = () => {
-  console.log('switch lang')
+  emit('switchLangage', (store.switchVariables.lang === 'fr') ? 'en' : 'fr')
 }
 const switchDisplayMode = () => {
-  console.log('switch mode')
+  emit('switchColorMode', (store.switchVariables.colorMode === 'light') ? 'dark' : 'light')
 }
 </script>
 

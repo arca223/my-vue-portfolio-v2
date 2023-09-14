@@ -17,7 +17,12 @@ export const useDefaultStore = defineStore('default', () => {
         linkedIn: 'https://www.linkedin.com/in/maxime-cocquempot-866944b2/',
     })
 
-    return { home, links }
+    const switchVariables = ref({
+        lang: 'fr',
+        colorMode: 'light'
+    })
+
+    return { home, links, switchVariables }
 })
 
 export const useExperienceStore = defineStore('experience', () => {
