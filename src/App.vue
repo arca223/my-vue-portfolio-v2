@@ -1,5 +1,5 @@
 <template>
-  <div class="container hero is-fullheight" :class="store.switchVariables.colorMode">
+  <div class="container hero is-fullheight">
     <Header/>
     <Wrapper/>
     <Footer/>

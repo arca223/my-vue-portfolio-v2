@@ -20,8 +20,8 @@
             <a class="button" @click="switchLanguage">
               {{ (store.switchVariables.lang === 'fr') ? 'Anglais' : 'Français' }}
             </a>
-            <a class="button" @click="switchDisplayMode">
-              {{ (store.switchVariables.colorMode === 'light') ? 'Dark' : 'Light' }}
+            <a class="button" @click="toggleDark()">
+              {{ (isDark) ? 'Light' : 'Dark' }}
             </a>
           </div>
         </div>
@@ -31,22 +31,30 @@
 </template>
 
 <script setup>
+
 import useEventsBus from '@/eventBus';
 import { useDefaultStore } from '@/stores/store.js';
 //in script setup or inside the setup hook
 const { emit } = useEventsBus();
 const store = useDefaultStore();
 
+import { useDark, useToggle } from "@vueuse/core";
+
+const isDark = useDark({
+  selector: "body",
+  attribute: "theme",
+  valueDark: "dark",
+  valueLight: "light",
+});
+const toggleDark = useToggle(isDark);
+
 //import {computed} from "vue";
 
 const switchLanguage = () => {
   emit('switchLangage', (store.switchVariables.lang === 'fr') ? 'en' : 'fr')
 }
-const switchDisplayMode = () => {
-  emit('switchColorMode', (store.switchVariables.colorMode === 'light') ? 'dark' : 'light')
-}
+
 </script>
 
 <style scoped>
-
 </style>

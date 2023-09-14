@@ -5,14 +5,72 @@ html, body {
   height: 100vh;
 }
 
+
+[theme="dark"] {
+  .card {
+    background: $grey-darker;
+    color: $white-ter!important;
+  }
+  & > *, .footer {
+    background: $black-ter;
+    color: $white-ter;
+    .button.dark {
+      background: $light;
+      color: $dark;
+    }
+    .title {
+      color: $white-bis;
+      &.clickable>div:hover, .router-link-active > div {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+[theme="light"] {
+  & > *, .footer, .card {
+    background: $white-ter;
+    color: $black-ter;
+    .button {
+      background: $dark;
+      color: $light;
+    }
+    .title {
+      color: $black-bis;
+      &.clickable > div:hover, .router-link-active > div {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+
+/*
+.dark {
+  background: $black-ter !important;
+  color: $white-ter !important;
+}
+
+.button {
+  background: $dark !important;
+  color: $light !important;
+}
+
+.button.dark {
+  background: $light !important;
+  color: $dark !important;
+}
+*/
+
+/*
 #app, body, div {
   background: $white-ter!important;
   color: $black-ter!important;
 
   &.dark {
-    background: $black-ter !important;
-    color: $white-ter !important;
-  }
+  background: $black-ter !important;
+  color: $white-ter !important;
+}
 
   & button {
     background: $dark!important;
@@ -25,3 +83,4 @@ html, body {
   }
 }
 
+*/

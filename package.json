@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/vue-fontawesome": "^3.0.3",
+    "@vueuse/core": "^10.4.1",
     "bulma": "^0.9.4",
     "core-js": "^3.8.3",
     "pinia": "^2.1.6",

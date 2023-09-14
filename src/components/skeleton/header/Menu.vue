@@ -21,7 +21,7 @@ const capitalize = (s) => {
          v-for="link in routes">
       <router-link
           :to="link.path"
-          class="title is-4"
+          class="title clickable is-4"
           @click="currentRoute = link.name">
         <div>{{ capitalize(link.name) }}</div>
       </router-link>
@@ -30,19 +30,4 @@ const capitalize = (s) => {
 </template>
 
 <style lang="scss" scoped>
-  .title {
-    & > div:hover {
-      color: $black-bis;
-      transform: scale(1.1);
-    }
-
-    &.dark > div:hover {
-      color: $white-bis;
-    }
-  }
-  .router-link-active>div {
-    color: $black-bis;
-    transform: scale(1.1);
-  }
-
 </style>
